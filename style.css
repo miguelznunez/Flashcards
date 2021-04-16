@@ -50,11 +50,10 @@ button:hover{
 
 .create-card{
   display:none;
-  width: 380px;
+  width: 370px;
   margin:auto;
   padding: 20px;
   margin-top: 10px;
-  border-radius: 5px;
   background: whitesmoke;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
