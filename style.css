@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: whitesmoke;
+}
+
+header{
+  background-color: #fff;
+}
+
+button{
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: whitesmoke;
+}
+
+button:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container{
+  width: 95%;
+  margin: auto;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.nav button{
+  font-family: inherit;
+  border: 1px solid red;
+}
+
+.create-card{
+  width: 380px;
+  margin:auto;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: whitesmoke;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.create-card textarea{
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+}
+
+.create-card button{
+  width: fit-content;
+}
+
+.flashcards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+.flashcard{
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.flashcard h2{
+  font-size: 1rem;
+}
+
+@media(max-width:768px){
+  .flashcard{
+    margin: auto;
+  }
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  .nav{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .create-card{
+    width: 100%;
+  }
+
+  .flashcard{
+    width: 100%;
+  }
+
+}
