@@ -2,7 +2,23 @@ const flashcards = document.getElementsByClassName("flashcards")[0];
 const createCard = document.getElementsByClassName("create-card")[0];
 const question = document.getElementById("question");
 const answer = document.getElementById("answer");
-let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+var contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+document.getElementById("add-flashcard").addEventListener("click", () => {
+  addFlashcard();
+});
+
+document.getElementById("showCreateCardBox").addEventListener("click", () => {
+  showCreateCardBox();
+});
+
+document.getElementById("delFlashcards").addEventListener("click", () => {
+  delFlashcards();
+});
+
+document.getElementById("hideCreateCardBox").addEventListener("click", () => {
+  hideCreateCardBox();
+});
 
 contentArray.forEach(divMaker);
 
@@ -22,7 +38,7 @@ function divMaker(text){
   div.appendChild(h2_question);
   div.appendChild(h2_answer);
 
-  div.addEventListener("click", function(){
+  div.addEventListener("click", () => {
     if(h2_answer.style.display == "none")
       h2_answer.style.display = "block";
     else
@@ -32,7 +48,7 @@ function divMaker(text){
   flashcards.appendChild(div);
 }
 
-function addFlashcard(){
+addFlashcard = () => {
   var flashcard_info = {
     'my_question' : question.value,
     'my_answer'  : answer.value
@@ -45,17 +61,17 @@ function addFlashcard(){
   answer.value = '';
 }
 
-function delFlashcards(){
+delFlashcards = () => {
   localStorage.clear();
   flashcards.innerHTML = '';
   contentArray = [];
 }
 
-function showCreateCardBox(){
+showCreateCardBox = () => {
   createCard.style.display = "block";
 }
 
-function hideCreateCardBox(){
+hideCreateCardBox = () => {
   createCard.style.display = "none";
 }
 
