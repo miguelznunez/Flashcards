@@ -30,16 +30,16 @@ button:hover{
 }
 
 .container{
-  width: 95%;
+  width: 1280px;
   margin: auto;
 }
 
 .nav{
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin: auto;
-  padding: 20px 0;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
   background: #fff;
 }
 
@@ -49,7 +49,7 @@ button:hover{
 }
 
 .create-card{
-  display:none;
+  display: none;
   width: 370px;
   margin:auto;
   padding: 20px;
@@ -92,6 +92,12 @@ button:hover{
 
 .flashcard h2{
   font-size: 1rem;
+}
+
+@media(max-width:1280px){
+  .container{
+    width: 95%;
+  }
 }
 
 @media(max-width:768px){
