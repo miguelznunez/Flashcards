@@ -12,10 +12,6 @@ body{
   background: whitesmoke;
 }
 
-header{
-  background-color: #fff;
-}
-
 button{
   padding: 8px;
   outline: none;
@@ -29,12 +25,15 @@ button:hover{
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.container{
+#main{
   width: 1280px;
   margin: auto;
 }
 
-.nav{
+
+header{background-color: #fff;}
+
+#header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,12 +42,12 @@ button:hover{
   background: #fff;
 }
 
-.nav button{
+#header button{
   font-family: inherit;
   border: 1px solid red;
 }
 
-.create-card{
+#create_card{
   display: none;
   width: 370px;
   margin:auto;
@@ -58,18 +57,21 @@ button:hover{
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
-.create-card textarea{
+#create_card h2{
+  color: black;
+  text-align: center;
+}
+
+#create_card textarea{
   width: 100%;
   border-radius: 5px;
   font-family: inherit;
   border: 1px solid lightgray;
 }
 
-.create-card button{
-  width: fit-content;
-}
+#create_card button{width: fit-content;}
 
-.flashcards{
+#flashcards{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,20 +92,14 @@ button:hover{
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
-.flashcard h2{
-  font-size: 1rem;
-}
+.flashcard h2{font-size: 1rem;}
 
 @media(max-width:1280px){
-  .container{
-    width: 95%;
-  }
+  #main{width: 100%;}
 }
 
 @media(max-width:768px){
-  .flashcard{
-    margin: auto;
-  }
+  .flashcard{margin: auto;}
 
   .flashcard{
     margin-top: 10px;
@@ -112,17 +108,15 @@ button:hover{
 }
 
 @media(max-width:480px){
-  .nav{
+  #header{
+    padding: 20px;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
   }
 
-  .create-card{
-    width: 100%;
-  }
+  #create_card{width: 95%;}
 
-  .flashcard{
-    width: 100%;
-  }
+  .flashcard{width: 100%;}
 
 }
