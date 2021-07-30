@@ -3,38 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="flashcard.png" />
   <link rel="stylesheet" href="style.css">
   <title>Flashcards</title>
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <div class="nav">
-        <h1>Flashcards</h1>
-        <div>
-          <button id="showCreateCardBox">New Card</button>
-          <button id="delFlashcards">Del Cards</button>
-        </div>
-      </div> 
-    </div>
-  </header>
-  
-  <div class="container">
-    <div class="create-card">
-      <h2 style="color: black;text-align: center;">Create Flashcard</h2>
+  <main id="main">
+    
+    <header id="header">
+      <h1>Flashcards</h1>
+      <div>
+        <button id="show_card_box">Add Card</button>
+        <button id="delete_cards">Del Cards</button>
+      </div>
+    </header>
+    
+    <section id="create_card">
+      <h2>Create Flashcard</h2>
       <label for="question">Question</label>
       <textarea id="question" maxlength="280"></textarea>
       <label for="answer" maxlength="280">Answer</label>
       <br>
       <textarea id="answer"></textarea>
       <div>
-        <button id="add-flashcard">Save</button> <button id="hideCreateCardBox">Close</button>
+        <button id="save_card">Save</button> <button id="close_card_box">Close</button>
       </div>
-    </div>
-    <div class="flashcards"></div>
-  </div>
-    
+    </section>
+
+    <section id="flashcards"></section>
+
+  </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
