@@ -100,7 +100,10 @@ header{background-color: #fff;}
   right: 2%;
   position: absolute;
   color: #1a1a1a;
+  transition: 0.3s ease-out;
 }
+
+.fa-minus:hover{color: red;}
 
 @media(max-width:1280px){
   .container{width: 100%;}
