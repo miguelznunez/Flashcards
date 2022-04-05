@@ -66,6 +66,7 @@ header{background-color: #fff;}
   border-radius: 5px;
   font-family: inherit;
   border: 1px solid lightgray;
+  resize: none;
 }
 
 #create_card button{width: fit-content;}
