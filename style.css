@@ -93,6 +93,13 @@ header{background-color: #fff;}
 
 .flashcard h2{font-size: 1rem;}
 
+.fa-minus{
+  top: 3%;
+  right: 2%;
+  position: absolute;
+  color: #1a1a1a;
+}
+
 @media(max-width:1280px){
   .container{width: 100%;}
 }
