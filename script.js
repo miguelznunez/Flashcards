@@ -18,10 +18,11 @@ document.getElementById("close_card_box").addEventListener("click", () => {
   document.getElementById("create_card").style.display = "none";
 });
 
-flashcardMaker = (text) => {
+flashcardMaker = (text, delThisIndex) => {
   const flashcard = document.createElement("div");
   const question = document.createElement('h2');
   const answer = document.createElement('h2');
+  const del = document.createElement('i');
 
   flashcard.className = 'flashcard';
 
@@ -31,8 +32,16 @@ flashcardMaker = (text) => {
   answer.setAttribute("style", "text-align:center; display:none; color:red");
   answer.textContent = text.my_answer;
 
+  del.className = "fas fa-minus";
+  del.addEventListener("click", () => {
+    contentArray.splice(delThisIndex, 1);
+    localStorage.setItem('items', JSON.stringify(contentArray));
+    window.location.reload();
+  })
+
   flashcard.appendChild(question);
   flashcard.appendChild(answer);
+  flashcard.appendChild(del);
 
   flashcard.addEventListener("click", () => {
     if(answer.style.display == "none")
@@ -57,7 +66,7 @@ addFlashcard = () => {
 
   contentArray.push(flashcard_info);
   localStorage.setItem('items', JSON.stringify(contentArray));
-  flashcardMaker(contentArray[contentArray.length - 1]);
+  flashcardMaker(contentArray[contentArray.length - 1], contentArray.length - 1);
   question.value = "";
   answer.value = "";
 }
